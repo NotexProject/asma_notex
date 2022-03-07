@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gn.module.evenements.EvenementsController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="641.0" prefWidth="1011.0">
+         <children>
+            <TableView fx:id="tvevenements" layoutX="-1.0" layoutY="394.0" prefHeight="202.0" prefWidth="1011.0">
+               <columns>
+                  <TableColumn fx:id="colidevent" text="id_event" />
+                  <TableColumn fx:id="colrespo" prefWidth="48.0" text="nom_responsable" />
+                  <TableColumn fx:id="colnom" minWidth="0.0" prefWidth="0.0" text="nom_event" />
+                  <TableColumn fx:id="coldate" text="date_event" />
+                  <TableColumn fx:id="colcate" text="category_event" />
+                  <TableColumn fx:id="colloca" text="localisation_event" />
+                  <TableColumn fx:id="colnbrplaces" text="nbr_places" />
+                  <TableColumn fx:id="coltotfrais" text="total_frais" />
+                  <TableColumn fx:id="coleditevent" text="Actions" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox layoutX="27.0" layoutY="2.0" prefHeight="306.0" prefWidth="475.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="553.0" text="                                 Gestion événements" textFill="#1c519a">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfidevent" prefHeight="25.0" prefWidth="376.0" promptText="ID_événement" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfrespo" prefHeight="25.0" prefWidth="370.0" promptText="Nom du responsable" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfnom" prefHeight="25.0" prefWidth="371.0" promptText="Nom de l'événement" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <DatePicker fx:id="tfdate" prefHeight="25.0" prefWidth="371.0" promptText="Date de l'événement" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="482.0">
+                     <children>
+                        <SVGPath content="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfcate" prefHeight="25.0" prefWidth="372.0" promptText="Catégorie de  l'événement" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfloca" prefHeight="25.0" prefWidth="377.0" promptText="Localisation de l'événement" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfnbrplace" prefHeight="25.0" prefWidth="375.0" promptText="Nombre de places" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tffrais" prefHeight="25.0" prefWidth="376.0" promptText="Total des frais" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <SVGPath content="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" strokeWidth="2.0" style="-fx-fill: -icon-color;" />
+                        <TextField fx:id="tfimage" editable="false" prefHeight="25.0" prefWidth="376.0" promptText="image" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="356.0" prefHeight="27.0" prefWidth="84.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnajoutevent" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="100.0" styleClass="btn-primary" text="Ajouter" />
+               </children>
+            </HBox>
+            <Label fx:id="label" layoutX="628.0" layoutY="20.0" prefHeight="272.0" prefWidth="332.0" />
+            <Button fx:id="btnbrowse" layoutX="845.0" layoutY="339.0" mnemonicParsing="false" onAction="#actionperformed" prefHeight="34.0" prefWidth="100.0" styleClass="btn-primary" text="Browse" />
+            <Label fx:id="label1" layoutX="630.0" layoutY="30.0" prefHeight="272.0" prefWidth="340.0" />
+            <VBox layoutX="450.0" layoutY="70.0" prefHeight="238.0" prefWidth="111.0" spacing="20.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <Label fx:id="lbl_nomrespo" text="invalid nom responsable" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_nomevent" text="invalid nom événement" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_cate" layoutX="20.0" layoutY="52.0" text="invalid catégorie" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_loca" layoutX="20.0" layoutY="95.0" text="invalid localisation" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_nbrplaces" layoutX="20.0" layoutY="138.0" text="invalid nombre de places" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_totalfrais" layoutX="20.0" layoutY="181.0" text="invalid total frais" textFill="#ee0d0d" visible="false">
+                     <font>
+                        <Font name="Gabriola" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
